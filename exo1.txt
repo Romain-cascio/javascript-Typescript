@@ -1,0 +1,25 @@
+export type User = {
+  name: string;
+  age: number;
+  occupation: string;
+  compentences?: string[];
+};
+
+export const users: User[] = [
+  {
+    name: 'Alain',
+    age: 25,
+    occupation: 'Boulanger',
+    compentences: ['js', 'node'],
+  },
+  {
+    // Ajoutez d'autres utilisateurs ici
+    name: 'Autre',
+    age: 30,
+    occupation: 'Autre occupation',
+  },
+];
+
+export function logPerson(user: User) {
+  console.log(` - ${user.name}, ${user.age}`);
+}

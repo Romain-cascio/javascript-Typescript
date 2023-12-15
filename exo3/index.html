@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utilisateurs & Articles</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #D3D3D3;
+        }
+
+        .card-column {
+            padding: 0 15px;
+        }
+
+        .card {
+            margin-bottom: 30px;
+            border: none;
+        }
+
+        .card-body {
+            padding: 20px;
+            background-color: #f8f8f8;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .card-title {
+            margin-bottom: 15px;
+            color: #007bff;
+        }
+
+        .card-text {
+            color: #333;
+        }
+
+        .text-secondary {
+            color: #6c757d;
+        }
+
+        .card ul {
+            padding: 0;
+            list-style: inside;
+        }
+
+        .card ul li {
+            padding: 5px 0;
+        }
+
+        #search-area {
+            margin-bottom: 30px;
+        }
+
+        #search-title,
+        #search-author {
+            margin-right: 10px;
+        }
+
+        #search-button {
+            background-color: #66CDAA;
+            color: #fff;
+        }
+
+        #search-button:hover {
+            background-color: #3CB371;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container mt-3">
+        <div id="search-area" class="mb-3">
+            <div class="input-group">
+                <input type="text" id="search-title" class="form-control" placeholder="Recherche par titre">
+                <input type="text" id="search-author" class="form-control ml-2" placeholder="Recherche par auteur">
+                <div class="input-group-append ml-2">
+                    <button id="search-button" class="btn btn-outline-secondary" type="button">Rechercher</button>
+                </div>
+            </div>
+        </div>
+        <div id="user-posts" class="row"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

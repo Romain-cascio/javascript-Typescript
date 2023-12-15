@@ -1,0 +1,18 @@
+interface Administrateur {
+  nom: string;
+  email: string;
+  ip: string;
+  dt_connexion: Date;
+  login: string;
+  password: string;
+}
+
+type UtilisateurAnonyme = Partial<Pick<Administrateur, 'nom'>> & {
+  ip: string;
+};
+
+const utilisateurAnonyme: UtilisateurAnonyme = {
+  ip: '192.168.0.1',
+};
+
+console.log(utilisateurAnonyme);
