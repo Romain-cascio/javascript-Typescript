@@ -34,15 +34,15 @@ async function displayData(usersWithPosts: UserWithPosts[]): Promise<void> {
 
   usersWithPosts.forEach(user => {
     const userColumn = document.createElement('div');
-    userColumn.className = 'col-md-4 card-column';
+    userColumn.className = 'col-md-4 content-column';
     
     const userCard = document.createElement('div');
-    userCard.className = 'card';
+    userCard.className = 'content-card';
     
     userCard.innerHTML = `
-      <div class="card-body">
-        <h5 class="card-title">${user.name}</h5>
-        <h6 class="card-text text-secondary">${user.email}</h6>
+      <div class="content-card-body">
+        <h5 class="content-card-title">${user.name}</h5>
+        <h6 class="content-card-text text-secondary">${user.email}</h6>
         <p class="text-warning">Titre des articles rédigés:</p>
         <ul>
           ${user.posts.map(post => `<li>${post.title}</li>`).join('')}
@@ -89,6 +89,6 @@ async function filterData() {
   displayData(usersWithFilteredPosts);
 }
 
-document.getElementById('search-button')!.addEventListener('click', filterData);
+document.getElementById('search-btn')!.addEventListener('click', filterData);
 
 loadData();
